@@ -1,0 +1,194 @@
+{
+  "ablation_test": {
+    "correlation": NaN,
+    "baseline_loss": 0.15729530677199363,
+    "results": [
+      {
+        "layer": 0,
+        "neuron": 0,
+        "utility": 0.0,
+        "loss_impact": 0.0001055248081684168
+      },
+      {
+        "layer": 0,
+        "neuron": 19,
+        "utility": 0.0,
+        "loss_impact": 0.0005928672850132044
+      },
+      {
+        "layer": 0,
+        "neuron": 38,
+        "utility": 0.0,
+        "loss_impact": 0.0004813142120838332
+      },
+      {
+        "layer": 0,
+        "neuron": 57,
+        "utility": 0.0,
+        "loss_impact": 0.0003588035702705439
+      },
+      {
+        "layer": 0,
+        "neuron": 76,
+        "utility": 0.0,
+        "loss_impact": 0.0005035899579524938
+      },
+      {
+        "layer": 0,
+        "neuron": 95,
+        "utility": 0.0,
+        "loss_impact": -0.0003441877663135362
+      },
+      {
+        "layer": 0,
+        "neuron": 114,
+        "utility": 0.0,
+        "loss_impact": 0.0003032930195331629
+      },
+      {
+        "layer": 0,
+        "neuron": 133,
+        "utility": 0.0,
+        "loss_impact": 0.0012358896434307154
+      },
+      {
+        "layer": 0,
+        "neuron": 152,
+        "utility": 0.0,
+        "loss_impact": 0.00032367557287216187
+      },
+      {
+        "layer": 0,
+        "neuron": 171,
+        "utility": 0.0,
+        "loss_impact": 0.0004498951137066054
+      },
+      {
+        "layer": 0,
+        "neuron": 190,
+        "utility": 0.0,
+        "loss_impact": 0.0012482136487960982
+      },
+      {
+        "layer": 0,
+        "neuron": 209,
+        "utility": 0.0,
+        "loss_impact": 0.0004706583917140905
+      },
+      {
+        "layer": 0,
+        "neuron": 228,
+        "utility": 0.0,
+        "loss_impact": -0.0004339419305324499
+      },
+      {
+        "layer": 0,
+        "neuron": 247,
+        "utility": 0.0,
+        "loss_impact": -0.00041351839900016785
+      },
+      {
+        "layer": 1,
+        "neuron": 10,
+        "utility": 0.0,
+        "loss_impact": 0.0011983945965766962
+      },
+      {
+        "layer": 1,
+        "neuron": 29,
+        "utility": 0.0,
+        "loss_impact": 0.0010687291622162032
+      },
+      {
+        "layer": 1,
+        "neuron": 48,
+        "utility": 0.0,
+        "loss_impact": 0.0006591856479644942
+      },
+      {
+        "layer": 1,
+        "neuron": 67,
+        "utility": 0.0,
+        "loss_impact": -0.00028014406561852057
+      },
+      {
+        "layer": 1,
+        "neuron": 86,
+        "utility": 0.0,
+        "loss_impact": 0.0009311504662037062
+      },
+      {
+        "layer": 1,
+        "neuron": 105,
+        "utility": 0.0,
+        "loss_impact": 0.00010342672467231195
+      }
+    ]
+  },
+  "stability_test": {
+    "mean_variance": 1.0082240689499177e-05,
+    "max_variance": 6.112118681938212e-05,
+    "coefficient_of_variation": 0.055729572041395205,
+    "n_runs": 10
+  },
+  "component_analysis": {
+    "activation_magnitude": {
+      "mean": 0.2475558824574888,
+      "std": 0.16457912460015434,
+      "min": 0.0008479321972872532,
+      "max": 0.6724938845761836,
+      "range": 0.6716459523788963
+    },
+    "activation_variance": {
+      "mean": 0.042989938366585434,
+      "std": 0.019766103493532326,
+      "min": 0.013109399668002033,
+      "max": 0.10817734873618136,
+      "range": 0.09506794906817932
+    },
+    "error_correlation": {
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "range": 0.0
+    },
+    "inactivity_penalty": {
+      "mean": 1.0,
+      "std": 0.0,
+      "min": 1.0,
+      "max": 1.0,
+      "range": 0.0
+    },
+    "final_utility": {
+      "mean": 0.0694040962616071,
+      "std": 0.03818461214837987,
+      "min": 0.006972975723899984,
+      "max": 0.1623565534462546,
+      "range": 0.15538357772235462
+    }
+  },
+  "noise_sensitivity": {
+    "noise_levels": [
+      0.0,
+      0.01,
+      0.05,
+      0.1
+    ],
+    "results": {
+      "0.01": {
+        "correlation": 0.9997437777627073,
+        "mean_change": 0.0005844317846133807
+      },
+      "0.05": {
+        "correlation": 0.9993122901902274,
+        "mean_change": 0.0011285856320237626
+      },
+      "0.1": {
+        "correlation": 0.9987807720999627,
+        "mean_change": 0.0016389894483300673
+      }
+    },
+    "avg_correlation": 0.9992789466842992
+  }
+}

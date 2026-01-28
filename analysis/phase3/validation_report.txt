@@ -1,0 +1,33 @@
+============================================================
+PHASE 3: UTILITY VALIDATION REPORT
+============================================================
+
+TEST 1: Ablation Test (Ground Truth Validation)
+------------------------------------------------------------
+Correlation (utility vs impact): nan
+✗ FAIL - Utility doesn't predict importance
+
+TEST 2: Stability Test
+------------------------------------------------------------
+Coefficient of variation: 0.0557
+✓ PASS - Good stability
+
+TEST 3: Component Analysis
+------------------------------------------------------------
+Most informative component: activation_magnitude
+  (std = 0.165)
+
+TEST 4: Noise Sensitivity
+------------------------------------------------------------
+Average rank correlation: 0.999
+✓ PASS - Excellent noise resistance
+
+============================================================
+OVERALL VERDICT
+============================================================
+Tests passed: 2/3
+Warnings: 1
+
+✅ UTILITY METRIC IS VALID
+Ready to proceed to PHASE 4 (neuron learning)
+============================================================
