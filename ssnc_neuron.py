@@ -8,6 +8,7 @@ Key principle: Neurons know themselves before they act.
 """
 
 import torch
+import torch.nn as nn
 import numpy as np
 from collections import deque
 from typing import Optional, Dict
@@ -247,7 +248,7 @@ class SSNCNeuron:
         )
 
 
-class SSNCNeuronLayer:
+class SSNCNeuronLayer(nn.Module):
     """
     Manages a layer of SSNC neurons.
     
@@ -260,6 +261,7 @@ class SSNCNeuronLayer:
             layer_id: Which layer in the network
             n_neurons: Number of neurons in this layer
         """
+        super().__init__()
         self.layer_id = layer_id
         self.n_neurons = n_neurons
         
