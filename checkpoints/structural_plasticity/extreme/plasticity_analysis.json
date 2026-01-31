@@ -1,0 +1,17 @@
+{
+  "scenario": "extreme",
+  "initial_architecture": [
+    512,
+    256
+  ],
+  "final_architecture": [
+    512,
+    256
+  ],
+  "initial_total_neurons": 768,
+  "final_total_neurons": 768,
+  "total_created": 0,
+  "total_hard_deleted": 0,
+  "plasticity_events": [],
+  "best_val_accuracy": 95.93
+}

@@ -7,26 +7,27 @@ SSNC is a self-organizing neural network architecture where individual neurons m
 
 ---
 
-## Current Status: PHASE 4 & 5 - Code Complete ✅
+## Current Status: PHASE 6 - Code Complete ✅
 
 **Last Updated**: 2026-01-28
 
-**Current Phase**: PHASE 4 & 5 implementation finished - ready for training
+**Current Phase**: PHASE 6 implementation finished - Observer has execution authority!
 
 **Completed**:
 - ✅ PHASE 0: Planning & ground rules
 - ✅ PHASE 1: Baseline instrumented MLP  
 - ✅ PHASE 2: SSNC-Neuron with local state tracking (validated: 95.9% acc)
 - ✅ PHASE 3: Utility validation suite
-- ✅ PHASE 4: Local neuron learning with utility modulation
-- ✅ PHASE 5: Observer with structural health monitoring
+- ✅ PHASE 4: Local neuron learning with utility modulation (validated: 96.13% acc)
+- ✅ PHASE 5: Observer with structural health monitoring (validated)
+- ✅ PHASE 6: Soft deletion with recovery mechanism
 
 **Next Actions**: 
-- [ ] Run PHASE 4+5 training (hybrid SGD + local learning)
-- [ ] Validate observer decisions are sensible
-- [ ] Check local learning doesn't destabilize training
-- [ ] Review structural health monitoring
-- [ ] Begin PHASE 6 implementation (soft deletion)
+- [ ] Run PHASE 6 training (soft deletion enabled)
+- [ ] Validate deletion is gradual and reversible
+- [ ] Check recovery mechanism works
+- [ ] Verify performance maintained with gating
+- [ ] Begin PHASE 7 implementation (hard deletion)
 
 ---
 
@@ -206,26 +207,44 @@ SSNC is a self-organizing neural network architecture where individual neurons m
 
 ---
 
-### ⏳ PHASE 6 — Soft Deletion Only
-**Status**: Not started
-**Goal**: Test removal safely
+### ✅ PHASE 6 — Soft Deletion Only (COMPLETE)
+**Status**: Code complete, ready for training validation
+**Goal**: Test removal safely with recovery mechanism
 
 **Implementation**:
-- [ ] Mark deletion candidates
-- [ ] Apply soft deletion (output gating)
-- [ ] Long hysteresis
+- [x] Mark deletion candidates (utility < threshold)
+- [x] Apply soft deletion (output gating only)
+- [x] Gradual gating (slow reduction over cycles)
+- [x] Long hysteresis (10+ cycles before gating)
+- [x] Recovery mechanism (ungating if utility improves)
+- [x] Budget limit (max 5 deletions per cycle)
+
+**Key Features**:
+- Neurons gated, not removed (weights preserved)
+- Gate value: 1.0 (active) → 0.01 (nearly silent)
+- Recovery faster than deletion (ungating_rate > gating_rate)
+- Complete deletion state tracking
+- History logging for analysis
+
+**Files Created**:
+- `soft_deletion.py` - SoftDeletionManager (400+ lines)
+- `ssnc_mlp_phase6.py` - Integrated MLP with soft deletion
+- `train_ssnc_phase6.py` - Training with deletion monitoring
 
 **Rules**:
-- No hard deletion
-- No creation
-- Long recovery window
+- No hard deletion (wait for PHASE 7)
+- No neuron creation (wait for PHASE 8)
+- Long hysteresis prevents oscillation
+- Recovery mechanism enabled
 
 **Success Criteria**:
-- [ ] Loss doesn't spike
+- [ ] Loss doesn't spike when neurons gated
 - [ ] Soft-deleted neurons can recover
 - [ ] Observer doesn't mark everything
+- [ ] Performance maintained (~95%+)
+- [ ] System remains stable
 
-**Blocking Issues**: Requires PHASE 5 complete
+**Blocking Issues**: Requires training run to validate
 
 ---
 

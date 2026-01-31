@@ -1,0 +1,17 @@
+{
+  "scenario": "normal",
+  "initial_architecture": [
+    128,
+    64
+  ],
+  "final_architecture": [
+    128,
+    64
+  ],
+  "initial_total_neurons": 192,
+  "final_total_neurons": 192,
+  "total_created": 0,
+  "total_hard_deleted": 0,
+  "plasticity_events": [],
+  "best_val_accuracy": 80.38
+}
