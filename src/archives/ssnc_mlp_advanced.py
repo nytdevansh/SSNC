@@ -14,7 +14,7 @@ import torch
 import torch.nn as nn
 from typing import List, Dict, Optional
 from ssnc_mlp import SSNC_MLP
-from local_learning import SSNCNeuronWithLearning, LocalLearningManager
+from archives.local_learning import SSNCNeuronWithLearning, LocalLearningManager
 from observer import SSNCObserver, StructuralDecision
 
 

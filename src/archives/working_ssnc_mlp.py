@@ -15,10 +15,14 @@ import torch.nn as nn
 import numpy as np
 from typing import List, Dict, Tuple
 import sys
-sys.path.append('/mnt/user-data/uploads')
+import os
 
+# Add project root and trec6 directory to path
+project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, project_root)
+sys.path.insert(0, os.path.join(project_root, 'trec6'))
 from ssnc_neuron import SSNCNeuron, SSNCNeuronLayer
-from local_learning import SSNCNeuronWithLearning, LocalLearningManager
+from src.archives.local_learning import SSNCNeuronWithLearning, LocalLearningManager
 
 
 class WorkingSSNC_MLP(nn.Module):

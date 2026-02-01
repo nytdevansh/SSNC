@@ -20,12 +20,16 @@ import matplotlib.pyplot as plt
 import numpy as np
 from pathlib import Path
 import sys
-sys.path.append('/mnt/user-data/uploads')
+import os
+
+# Add project root to path
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, project_root)
 
 # Import SSNC components
 try:
-    from ssnc_mlp import SSNC_MLP
-    from soft_deletion import SoftDeletionManager
+    from src.archives.ssnc_mlp import SSNC_MLP
+    from src.archives.soft_deletion import SoftDeletionManager
     print("✓ SSNC modules imported successfully")
 except ImportError as e:
     print(f"✗ Import error: {e}")

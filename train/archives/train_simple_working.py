@@ -22,7 +22,7 @@ import json
 import sys
 
 sys.path.append('/home/claude')
-from actually_working_ssnc import WorkingSSNC_MLP
+from archives.actually_working_ssnc import WorkingSSNC_MLP
 
 
 # AGGRESSIVE SETTINGS TO GUARANTEE ACTIVITY

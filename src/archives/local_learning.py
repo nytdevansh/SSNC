@@ -16,6 +16,12 @@ CRITICAL SAFETY:
 import torch
 import numpy as np
 from typing import Optional
+import sys
+import os
+# Add project root and trec6 directory to path
+project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, project_root)
+sys.path.insert(0, os.path.join(project_root, 'trec6'))
 from ssnc_neuron import SSNCNeuron
 
 

@@ -24,7 +24,7 @@ import sys
 
 # Import our working model
 sys.path.append('/home/claude')
-from working_ssnc_mlp import WorkingSSNC_MLP
+from archives.working_ssnc_mlp import WorkingSSNC_MLP
 
 
 # ============================================================================

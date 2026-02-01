@@ -23,7 +23,7 @@ import json
 import sys
 
 sys.path.append('/mnt/user-data/outputs')
-from actually_working_ssnc import WorkingSSNC_MLP
+from archives.actually_working_ssnc import WorkingSSNC_MLP
 
 
 # BALANCED SETTINGS - Conservative but active

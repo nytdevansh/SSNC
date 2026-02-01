@@ -21,7 +21,7 @@ import json
 import numpy as np
 from pathlib import Path
 
-from ssnc_mlp_phase6 import SSNC_MLP_Phase6, print_phase6_stats
+from phases.ssnc_mlp_phase6 import SSNC_MLP_Phase6, print_phase6_stats
 
 
 class Phase6Trainer:

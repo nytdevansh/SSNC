@@ -40,8 +40,13 @@ from pathlib import Path
 import json
 import sys
 from collections import defaultdict
+import sys
+import os
 
-sys.path.append('/home/claude')
+# Add project root and trec6 directory to path
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, project_root)
+sys.path.insert(0, os.path.join(project_root, 'trec6'))
 
 try:
     from complete_ssnc_system import CompleteSSNC_MLP
