@@ -221,8 +221,16 @@ class TREC6Dataset(Dataset):
     2: DESC (description)
     3: HUM (human)
     4: LOC (location)
-    5: NUM (numeric)
     """
+    
+    COARSE_LABELS = {
+        0: 'ABBR',
+        1: 'ENTY', 
+        2: 'DESC',
+        3: 'HUM',
+        4: 'LOC',
+        5: 'NUM'
+    }
     
     def __init__(self, data_dict, split='train'):
         """

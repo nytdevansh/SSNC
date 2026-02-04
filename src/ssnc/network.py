@@ -542,6 +542,9 @@ class CompleteSSNC_MLP(nn.Module):
         n_hard = sum(1 for m in self.neuron_metrics.values() if m.hard_deleted)
         actions['stats'] = {'active': n_active, 'soft': n_soft, 'hard': n_hard}
         
+        # Initialize safe default
+        observer_decision = {}
+        
         # === PRINCIPLED OBSERVER DECISION ===
         if self.enable_monitoring and current_loss is not None:
             # Calculate current layer sizes (neurons not hard deleted)
